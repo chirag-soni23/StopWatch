@@ -1,0 +1,71 @@
+/*------------------------------------- CSS --------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(39, 2, 74, 0.857);
+    display: flex;
+    justify-content: center;
+}
+.inner-container{
+    height: 40vh;
+    width: 40vh;
+    background-color: rgba(7, 7, 81, 0.808);
+    border-radius: 50%;
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ffffff;
+    animation: ShineShadow 2s linear infinite;
+}
+/*------------------------------ Border Shadow Animation----------------------------- */
+@keyframes ShineShadow {
+    0%,100%{
+        box-shadow: 0px 0px 50px -12px rgb(0, 255, 0);
+    }
+    50%{
+        box-shadow: 0px 0px 50px 3px rgb(0, 255, 0);
+        
+    }
+}
+.buttons{
+    position: absolute;
+    top: 400px;
+}
+button{
+    margin: 20px 20px;
+    height: 8vh;
+    width: 17vh;
+    border-radius: 20px;
+    background-color: rgba(7, 7, 81, 0.808);
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+}
+/* ----------------------------------Hovering button------------------------------- */
+button:hover{
+    animation: ShineShadow 2s linear infinite;
+    cursor: pointer;
+}
+/*----------------------------------- Responsive----------------------------------------- */
+@media only screen and (max-height: 400px) {
+    .container{
+        height: 200vh;
+    }
+    .inner-container{
+        width: 70vh;
+        height: 70vh;
+    }
+    button{
+        height: 15vh;
+        width: 30vh;
+    }
+}
